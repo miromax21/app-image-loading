@@ -7,12 +7,25 @@
 //
 
 import UIKit
+
 extension UIView {
+    
     static let loadingViewTag = 1938123987
-    func showLoading(style: UIActivityIndicatorView.Style = .medium) {
+    
+    func showLoading(style: UIActivityIndicatorView.Style? = nil)  {
+        var loadingStyle: UIActivityIndicatorView.Style
+        if #available(iOS 13.0, *) {
+            loadingStyle = UIActivityIndicatorView.Style.medium
+        } else {
+             loadingStyle = .whiteLarge
+            // Fallback on earlier versions
+        }
+        if style != nil {
+            loadingStyle = style ?? loadingStyle
+        }
         var loading = viewWithTag(UIView.loadingViewTag) as? UIActivityIndicatorView
         if loading == nil {
-            loading = UIActivityIndicatorView(style: style)
+            loading = UIActivityIndicatorView(style: loadingStyle)
         }
 
         loading?.translatesAutoresizingMaskIntoConstraints = false

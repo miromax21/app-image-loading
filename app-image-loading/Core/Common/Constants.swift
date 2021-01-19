@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 enum ImagesConstats: String{
     case loadingErrorImage = "error"
 }

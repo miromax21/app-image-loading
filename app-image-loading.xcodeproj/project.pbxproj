@@ -21,19 +21,19 @@
 		1B461ADA25B4ADA3004DFF39 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461AD925B4ADA3004DFF39 /* AppCoordinator.swift */; };
 		1B461ADC25B4ADDB004DFF39 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461ADB25B4ADDB004DFF39 /* Router.swift */; };
 		1B461ADE25B4AE77004DFF39 /* ImageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461ADD25B4AE77004DFF39 /* ImageListViewModel.swift */; };
-		1B461AE425B4B03D004DFF39 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461AE325B4B03D004DFF39 /* ViewModel.swift */; };
+		1B461AE425B4B03D004DFF39 /* ViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461AE325B4B03D004DFF39 /* ViewModelProtocols.swift */; };
 		1B461AE725B4B4D1004DFF39 /* URLSessionApiSrevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461AE625B4B4D1004DFF39 /* URLSessionApiSrevices.swift */; };
 		1B461AEB25B4B515004DFF39 /* ApiServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461AEA25B4B515004DFF39 /* ApiServiceProtocols.swift */; };
 		1B461AEE25B4B973004DFF39 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461AED25B4B973004DFF39 /* Utils.swift */; };
 		1B461AF025B4CF23004DFF39 /* Aplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461AEF25B4CF23004DFF39 /* Aplication.swift */; };
 		1B461AF325B4CFA0004DFF39 /* CoreDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461AF225B4CFA0004DFF39 /* CoreDataUseCase.swift */; };
 		1B461AF625B4DD78004DFF39 /* UITableViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461AF525B4DD78004DFF39 /* UITableViewExtention.swift */; };
+		1B7BFB6D261D7E8D00AAD120 /* AppProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7BFB6C261D7E8D00AAD120 /* AppProtocols.swift */; };
 		1B9B43D025B6144300C25901 /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9B43CF25B6144300C25901 /* UIViewExtention.swift */; };
 		1B9B43D325B6154000C25901 /* ShowImageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9B43D225B6154000C25901 /* ShowImageCoordinator.swift */; };
 		1B9B43D625B615B500C25901 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9B43D525B615B500C25901 /* ImageViewModel.swift */; };
 		1B9B43D825B6163C00C25901 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9B43D725B6163C00C25901 /* ImageViewController.swift */; };
 		1B9B43DA25B6167D00C25901 /* ImageViewCintroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B9B43D925B6167D00C25901 /* ImageViewCintroller.xib */; };
-		1BC6611125B55AD000C2E0A1 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6611025B55AD000C2E0A1 /* UIImageViewExtension.swift */; };
 		1BC6611525B55B5400C2E0A1 /* CellWithImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6611425B55B5400C2E0A1 /* CellWithImageModel.swift */; };
 		1BC9E87825B6ADFF00C8559E /* ImageLoadingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9E87725B6ADFF00C8559E /* ImageLoadingUseCase.swift */; };
 		1BC9E87A25B6EACA00C8559E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9E87925B6EACA00C8559E /* Constants.swift */; };
@@ -56,19 +56,19 @@
 		1B461AD925B4ADA3004DFF39 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1B461ADB25B4ADDB004DFF39 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		1B461ADD25B4AE77004DFF39 /* ImageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewModel.swift; sourceTree = "<group>"; };
-		1B461AE325B4B03D004DFF39 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		1B461AE325B4B03D004DFF39 /* ViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocols.swift; sourceTree = "<group>"; };
 		1B461AE625B4B4D1004DFF39 /* URLSessionApiSrevices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionApiSrevices.swift; sourceTree = "<group>"; };
 		1B461AEA25B4B515004DFF39 /* ApiServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceProtocols.swift; sourceTree = "<group>"; };
 		1B461AED25B4B973004DFF39 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		1B461AEF25B4CF23004DFF39 /* Aplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aplication.swift; sourceTree = "<group>"; };
 		1B461AF225B4CFA0004DFF39 /* CoreDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUseCase.swift; sourceTree = "<group>"; };
 		1B461AF525B4DD78004DFF39 /* UITableViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtention.swift; sourceTree = "<group>"; };
+		1B7BFB6C261D7E8D00AAD120 /* AppProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProtocols.swift; sourceTree = "<group>"; };
 		1B9B43CF25B6144300C25901 /* UIViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
 		1B9B43D225B6154000C25901 /* ShowImageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageCoordinator.swift; sourceTree = "<group>"; };
 		1B9B43D525B615B500C25901 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		1B9B43D725B6163C00C25901 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		1B9B43D925B6167D00C25901 /* ImageViewCintroller.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewCintroller.xib; sourceTree = "<group>"; };
-		1BC6611025B55AD000C2E0A1 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		1BC6611425B55B5400C2E0A1 /* CellWithImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWithImageModel.swift; sourceTree = "<group>"; };
 		1BC9E87725B6ADFF00C8559E /* ImageLoadingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingUseCase.swift; sourceTree = "<group>"; };
 		1BC9E87925B6EACA00C8559E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -158,9 +158,10 @@
 		1B461AD625B4AD3B004DFF39 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1B461AF425B4DD5A004DFF39 /* Extentions */,
 				1B461AEC25B4B962004DFF39 /* Utils */,
 				1B461AE125B4B012004DFF39 /* Common */,
-				1B461AE025B4AFEF004DFF39 /* Coordinator */,
+				1B461AE025B4AFEF004DFF39 /* Routing */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -175,20 +176,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1B461AE025B4AFEF004DFF39 /* Coordinator */ = {
+		1B461AE025B4AFEF004DFF39 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
 				1B461AD725B4AD61004DFF39 /* BaseCoordinator.swift */,
 				1B461AD925B4ADA3004DFF39 /* AppCoordinator.swift */,
 				1B461ADB25B4ADDB004DFF39 /* Router.swift */,
 			);
-			path = Coordinator;
+			path = Routing;
 			sourceTree = "<group>";
 		};
 		1B461AE125B4B012004DFF39 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				1B461AF425B4DD5A004DFF39 /* Extentions */,
 				1B461AE225B4B023004DFF39 /* Protocols */,
 				1BC9E87925B6EACA00C8559E /* Constants.swift */,
 			);
@@ -198,7 +198,8 @@
 		1B461AE225B4B023004DFF39 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				1B461AE325B4B03D004DFF39 /* ViewModel.swift */,
+				1B461AE325B4B03D004DFF39 /* ViewModelProtocols.swift */,
+				1B7BFB6C261D7E8D00AAD120 /* AppProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -250,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				1B461AF525B4DD78004DFF39 /* UITableViewExtention.swift */,
-				1BC6611025B55AD000C2E0A1 /* UIImageViewExtension.swift */,
 				1B9B43CF25B6144300C25901 /* UIViewExtention.swift */,
 			);
 			path = Extentions;
@@ -364,7 +364,7 @@
 				1B461AEE25B4B973004DFF39 /* Utils.swift in Sources */,
 				1B461AE725B4B4D1004DFF39 /* URLSessionApiSrevices.swift in Sources */,
 				1B461AF625B4DD78004DFF39 /* UITableViewExtention.swift in Sources */,
-				1B461AE425B4B03D004DFF39 /* ViewModel.swift in Sources */,
+				1B461AE425B4B03D004DFF39 /* ViewModelProtocols.swift in Sources */,
 				1B461ABA25B4AB30004DFF39 /* SceneDelegate.swift in Sources */,
 				1B461ADC25B4ADDB004DFF39 /* Router.swift in Sources */,
 				1B461ADA25B4ADA3004DFF39 /* AppCoordinator.swift in Sources */,
@@ -375,10 +375,10 @@
 				1BC6611525B55B5400C2E0A1 /* CellWithImageModel.swift in Sources */,
 				1B461ADE25B4AE77004DFF39 /* ImageListViewModel.swift in Sources */,
 				1B461AF325B4CFA0004DFF39 /* CoreDataUseCase.swift in Sources */,
-				1BC6611125B55AD000C2E0A1 /* UIImageViewExtension.swift in Sources */,
 				1B461AD825B4AD61004DFF39 /* BaseCoordinator.swift in Sources */,
 				1B461ABC25B4AB30004DFF39 /* ContentView.swift in Sources */,
 				1B9B43D625B615B500C25901 /* ImageViewModel.swift in Sources */,
+				1B7BFB6D261D7E8D00AAD120 /* AppProtocols.swift in Sources */,
 				1BC9E87825B6ADFF00C8559E /* ImageLoadingUseCase.swift in Sources */,
 				1B461AD325B4AC40004DFF39 /* ImageList.swift in Sources */,
 			);
@@ -521,6 +521,7 @@
 				DEVELOPMENT_TEAM = F7HQJR66P4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "app-image-loading/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -541,6 +542,7 @@
 				DEVELOPMENT_TEAM = F7HQJR66P4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "app-image-loading/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

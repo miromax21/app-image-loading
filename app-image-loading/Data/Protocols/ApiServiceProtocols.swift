@@ -16,7 +16,8 @@ enum RequestEnum<T>{
     case error(data:T?, errorMessage:RequestError)
 }
 
-enum RequestError: Error {
+enum RequestError {
+    case cancel
     case any
     case noInternet
     case authentifications
@@ -24,4 +25,12 @@ enum RequestError: Error {
     case serverError(error: NSError)
     case noData
     
+    func noData() -> Bool {
+        switch self {
+        case .noData:
+            return true
+        default:
+            return false
+        }
+    }
 }

@@ -9,10 +9,6 @@
 import Foundation
 import UIKit
 
-protocol Coordinator: AnyObject {
-    func start() -> UIViewController
-}
-
 class BaseCoordinator: Coordinator {
     var appCoordinator: AppCoordinator!
     var viewModel: ViewModelProtocol!

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+
 class ShowImageCoordinator: BaseCoordinator {
     var image: CellWithImageModel?
     init(image: CellWithImageModel?) {

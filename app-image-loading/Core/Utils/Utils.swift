@@ -21,15 +21,21 @@ class Utils {
 
 //MARK: privet Utils functions
     fileprivate func checkInternetConnection() -> Bool  {
-        let monitor = NWPathMonitor()
-        var connectionerror = false
-        monitor.start(queue: self.utilsQueue)
-        monitor.pathUpdateHandler   = { pathUpdateHandler in
-             if !(pathUpdateHandler.status == .satisfied){
-                connectionerror = true
-             }
+        if #available(iOS 12.0, *) {
+            let monitor = NWPathMonitor()
+            var connectionerror = false
+            monitor.start(queue: self.utilsQueue)
+            monitor.pathUpdateHandler   = { pathUpdateHandler in
+                 if !(pathUpdateHandler.status == .satisfied){
+                    connectionerror = true
+                 }
+            }
+            return connectionerror
+        } else {
+            // нужно добавить проверку для iOS 11
+           return true
         }
-        return connectionerror
+
     }
 }
 

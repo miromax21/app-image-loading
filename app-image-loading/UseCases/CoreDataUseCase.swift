@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 
 class CoreDataUseCase {
+    
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "app-image")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in

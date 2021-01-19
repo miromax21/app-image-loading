@@ -8,47 +8,62 @@
 
 import Foundation
 import UIKit
+
 class ImageListCell: UITableViewCell {
     @IBOutlet weak var pic: UIImageView!
     var usecase: ImageLoadingUseCase!
-    var isLoaded = false
-    var succes = false
-
+    var loadindSuccess = false
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.setDefault()
+        self.pic.isHidden = true;
+    }
+    
     func confugure(usecase: ImageLoadingUseCase) {
         self.usecase = usecase;
     }
+    
     var cellImage: CellWithImageModel! {
         willSet(cellImage){
             self.setDefault()
-            self.loadImage(imageUrl: cellImage.imageUrl)
         }
-    }
-    func setDefault(){
-        self.pic.image = UIImage()
     }
     
-    func loadImage(imageUrl:String) {
-        self.pic.showLoading()
-        self.succes = false
-        self.usecase.getImage(url: imageUrl) {[unowned self] (data) in
-            self.isLoaded = true
-            guard let data = data else {
-                DispatchQueue.main.async {
-                    self.pic.image = UIImage(named: ImagesConstats.loadingErrorImage.rawValue)
-                    self.pic.stopLoading()
-                }
-                return
-            }
-            self.succes = true
-            DispatchQueue.main.async {
-                self.pic.image = UIImage(data: data)
-                self.pic.stopLoading()
-            }
-        }
+    func setDefault(){
+        self.pic.image = nil
+        self.pic.stopLoading()
     }
-    func reloadImage()  {
+    
+    func loadImage(completion: (() -> Void)? = nil) {
         self.setDefault()
-        self.loadImage(imageUrl: self.cellImage.imageUrl)
+        self.loadindSuccess = false
+        let imageUrl = self.cellImage.imageUrl
+        self.pic.showLoading()
+        DispatchQueue.global(qos: .background).async(execute: { [unowned self] () -> Void in
+            self.usecase.getImage(url: imageUrl) { [unowned self] (image, url) in
+                guard let image = image else {
+                    self.pic.stopLoading()
+                    return
+                }
+                self.loadindSuccess = true
+                if ((url != nil) && url!.elementsEqual(imageUrl)){
+                     DispatchQueue.main.async {
+                        self.pic.isHidden = false
+                        self.pic.image = image
+                        self.pic.stopLoading()
+                        if completion != nil {
+                            completion!()
+                        }
+                    }
+                }
+            }
+            
+        })
+    }
+    
+    func reloadImage(completion: @escaping () -> ())  {
+        self.loadImage(completion: completion)
     }
     
 }

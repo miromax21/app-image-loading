@@ -8,9 +8,8 @@
 
 import UIKit
 import SwiftUI
-protocol SceneDelegateApp {
-    var app: AppProtocol! { get }
-}
+
+@available(iOS 13, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, SceneDelegateApp {
 
     var window: UIWindow?

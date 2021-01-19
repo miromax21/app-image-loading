@@ -8,11 +8,7 @@
 
 import Foundation
 import UIKit
-protocol AppProtocol {
-    func start()
-    func saveCobtext()
-    var appCoordinator: AppCoordinator! {get}
-}
+
 class App : AppProtocol {
     
     var appCoordinator: AppCoordinator!
