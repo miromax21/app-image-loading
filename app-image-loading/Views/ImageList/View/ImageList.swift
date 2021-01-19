@@ -18,7 +18,6 @@ class ImageListViewController: UIViewController {
             self.myArray = data
             self.tableView.reloadData()
         }
-        
     }
     
     func initTable() {
@@ -34,6 +33,7 @@ class ImageListViewController: UIViewController {
            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
            tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
     }
+    
     private func setupTableViewBinding() {
         tableView.dataSource = self
         tableView.delegate = self
@@ -59,6 +59,7 @@ extension ImageListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myArray.count
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
