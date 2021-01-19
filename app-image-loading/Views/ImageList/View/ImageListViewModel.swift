@@ -14,12 +14,13 @@ class ImageListViewModel: ViewModelProtocol{
     var view: ImageListViewController
     var coordinator: BaseCoordinator!
     var useCaase: ImageLoadingUseCase!
+    var service: Api
+    
     var list: [CellWithImageModel] = [] {
         didSet{
             view.tableView.reloadData()
         }
     }
-    var service: Api
     var Output: UIViewController! {
          get{
              return self.view
