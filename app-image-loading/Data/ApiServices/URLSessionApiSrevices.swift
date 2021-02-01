@@ -8,7 +8,6 @@
 
 import Foundation
 class URLSessionApiSrevices: Api {
-    var task: URLSessionTask?
     var error : String?
 
     private var urlSession: URLSession
@@ -19,16 +18,15 @@ class URLSessionApiSrevices: Api {
     public init(config:URLSessionConfiguration = URLSessionConfiguration.default) {
        self.urlSession = URLSession(configuration: config)
     }
-    func callAPI(request: URLRequest, completion: @escaping (RequestEnum<Data?>) -> ()) {
+    func callAPI(request: URLRequest, completion: @escaping (RequestEnum<Data?>) -> ()) -> URLSessionDataTask? {
         if let dataFromCache = self.getDataFromCache(request: request){
             completion(RequestEnum.success(data: dataFromCache))
-            return
+            return nil
         }
         if Utils.shared.isInternetAvailable {
-            defer { self.task = nil }
             completion(RequestEnum.error( data: nil, errorMessage: RequestError.noInternet))
         }
-         self.task = self.urlSession.dataTask(with: request) { (data, response, error) in
+        let task = self.urlSession.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 completion(RequestEnum.error(data: nil, errorMessage: RequestError.sessionError(error: error)))
             }
@@ -49,9 +47,9 @@ class URLSessionApiSrevices: Api {
                     completion(RequestEnum.error(data: nil, errorMessage: RequestError.sessionError(error: taskError)))
                 }
             }
-            self.task?.cancel()
         }
-        self.task?.resume()
+        task.resume()
+        return task;
     }
     
     

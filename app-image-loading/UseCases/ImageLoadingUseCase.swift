@@ -7,23 +7,38 @@
 //
 
 import Foundation
+import UIKit
 class ImageLoadingUseCase{
     var service: Api!
+    private var uuidMap = [UUID: URLSessionDataTask]()
     init() {
         self.service = URLSessionApiSrevices()
     }
-    func getImage(url:String, completion: @escaping (Data?) -> ()){
-         guard let url = URL(string: url) else {return  completion(nil);}
+    func getImage(url:String, completion: @escaping (UIImage?) -> ()) -> UUID?{
+         guard let url = URL(string: url) else {return nil}
+         let uuid = UUID()
          DispatchQueue.global(qos: .background).async {
-            self.service.callAPI(request: URLRequest(url: url)) { (responce) in
+            self.uuidMap[uuid] = self.service.callAPI(request: URLRequest(url: url)) { (responce) in
                 switch responce{
                 case .success(data: let data):
-                    completion(data ?? nil);
+                    guard let data = data else{
+                        completion(nil)
+                        return
+                    }
+                    let image = UIImage(data: data!)
+                       completion(image);
+    
                 case .error(data: _, errorMessage: _):
-                    completion(nil);
+                    completion(UIImage(named: ImagesConstats.loadingErrorImage.rawValue));
                 }
+                
             }
         }
+        return uuid
     }
     
+    func cancelRequest(_ uuid: UUID){
+        self.uuidMap[uuid]?.cancel()
+        self.uuidMap.removeValue(forKey: uuid)
+    }
 }

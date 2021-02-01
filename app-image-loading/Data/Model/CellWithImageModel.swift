@@ -15,5 +15,6 @@ class CellWithImageModel{
     init(image_number:Int){
         id = UUID()
         self.imageUrl = "http://placehold.it/375x150?text=\(image_number)"
+        // self.imageUrl = "https://placehold.it/\(100 + (2 * image_number))x\(100 + (50 * image_number))?text=\(100 + (10 * image_number))"
     }
 }

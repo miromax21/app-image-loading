@@ -9,14 +9,15 @@
 import Foundation
 
 protocol Api{
-    func callAPI(request: URLRequest, completion: @escaping (_ responce: RequestEnum<Data?>) ->())
+    func callAPI(request: URLRequest, completion: @escaping (_ responce: RequestEnum<Data?>) ->()) -> URLSessionDataTask?
 }
 enum RequestEnum<T>{
     case success(data:T?)
     case error(data:T?, errorMessage:RequestError)
 }
 
-enum RequestError: Error {
+enum RequestError {
+    case cancel
     case any
     case noInternet
     case authentifications

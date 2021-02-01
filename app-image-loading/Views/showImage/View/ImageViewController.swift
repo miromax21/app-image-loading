@@ -11,22 +11,31 @@ import Foundation
 import UIKit
 class ImageViewCintroller: UIViewController{
     @IBOutlet var imageView: UIImageView!
-    var viewModel: ImageViewModel!
+    unowned var viewModel: ImageViewModel! {
+        didSet{
+            self.loadImage()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadImage()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
+       self.edgesForExtendedLayout = []
     }
     
     func loadImage() {
-        self.imageView.showLoading()
-        self.viewModel.useCaase.getImage(url: self.viewModel.image.imageUrl) { (data) in
-            guard let data = data else {return}
-            DispatchQueue.main.async { () -> Void in
-               self.imageView.image = UIImage(data: data);
-               self.imageView.stopLoading()
-            }
-
+        if self.imageView != nil{
+            self.imageView.showLoading()
+        }
+        self.viewModel.loadImage { (img) in
+            guard let img = img else {return}
+               DispatchQueue.main.async { () -> Void in
+                  self.imageView.image = img
+                  self.imageView.stopLoading()
+               }
         }
     }
 }

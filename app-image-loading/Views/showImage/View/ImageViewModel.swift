@@ -23,11 +23,15 @@ class ImageViewModel: ViewModelProtocol{
     
     init(image: CellWithImageModel!) {
         self.useCaase = ImageLoadingUseCase()
-        self.view = ImageViewCintroller()
         self.image = image;
         self.service = URLSessionApiSrevices()
+        self.view = ImageViewCintroller()
         self.view.viewModel = self
+        
     }
     
+    func loadImage(completion: @escaping (UIImage?) -> ()) {
+        self.useCaase.getImage(url: self.image.imageUrl, completion: completion)
+    }
 }
 

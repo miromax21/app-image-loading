@@ -517,6 +517,7 @@
 				DEVELOPMENT_TEAM = F7HQJR66P4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "app-image-loading/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -537,6 +538,7 @@
 				DEVELOPMENT_TEAM = F7HQJR66P4;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "app-image-loading/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

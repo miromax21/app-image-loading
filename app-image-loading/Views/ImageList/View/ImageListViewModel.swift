@@ -16,11 +16,7 @@ class ImageListViewModel: ViewModelProtocol{
     var useCaase: ImageLoadingUseCase!
     var service: Api
     
-    var list: [CellWithImageModel] = [] {
-        didSet{
-            view.tableView.reloadData()
-        }
-    }
+    var list: [CellWithImageModel]!
     var Output: UIViewController! {
          get{
              return self.view
@@ -28,6 +24,7 @@ class ImageListViewModel: ViewModelProtocol{
     }
     
     init(coordinator: BaseCoordinator!) {
+        self.list = []
         self.coordinator = coordinator
         self.service = URLSessionApiSrevices()
         self.useCaase = ImageLoadingUseCase()
@@ -35,13 +32,14 @@ class ImageListViewModel: ViewModelProtocol{
         self.view.viewModel = self
     }
     
-    func readDataImages(completion: @escaping (_ data: [CellWithImageModel]) ->()){
+    func readDataImages(completion: @escaping () ->()){
         var list:  [CellWithImageModel] = []
-        for index in 1 ..< 101 {
+        for index in 1 ..< 100 {
             list.append(CellWithImageModel.init(image_number: index))
         }
+        self.list = list
         DispatchQueue.main.async {
-            completion(list)
+            completion()
         }
     }
     
