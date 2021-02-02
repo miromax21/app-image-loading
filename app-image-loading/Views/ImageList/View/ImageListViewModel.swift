@@ -34,7 +34,7 @@ class ImageListViewModel: ViewModelProtocol{
     
     func readDataImages(completion: @escaping () ->()){
         var list:  [CellWithImageModel] = []
-        for index in 1 ..< 100 {
+        for index in 1 ..< 101 {
             list.append(CellWithImageModel.init(image_number: index))
         }
         self.list = list

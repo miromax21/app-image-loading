@@ -25,4 +25,12 @@ enum RequestError {
     case serverError(error: NSError)
     case noData
     
+    func noData() -> Bool {
+        switch self {
+        case .noData:
+            return true
+        default:
+            return false
+        }
+    }
 }
