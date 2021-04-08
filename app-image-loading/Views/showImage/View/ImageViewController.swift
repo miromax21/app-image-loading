@@ -10,7 +10,7 @@
 import Foundation
 import UIKit
 
-class ImageViewCintroller: UIViewController{
+class ImageViewController: UIViewController{
     
     @IBOutlet var imageView: UIImageView!
     

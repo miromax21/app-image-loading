@@ -15,7 +15,7 @@
 		1B461AC425B4AB34004DFF39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B461AC225B4AB34004DFF39 /* LaunchScreen.storyboard */; };
 		1B461ACF25B4ABAC004DFF39 /* ImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461ACE25B4ABAC004DFF39 /* ImageListCell.swift */; };
 		1B461AD125B4ABF9004DFF39 /* ImageListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B461AD025B4ABF9004DFF39 /* ImageListCell.xib */; };
-		1B461AD325B4AC40004DFF39 /* ImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461AD225B4AC40004DFF39 /* ImageList.swift */; };
+		1B461AD325B4AC40004DFF39 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461AD225B4AC40004DFF39 /* ImageListViewController.swift */; };
 		1B461AD525B4AD2D004DFF39 /* ImageListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461AD425B4AD2D004DFF39 /* ImageListCoordinator.swift */; };
 		1B461AD825B4AD61004DFF39 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461AD725B4AD61004DFF39 /* BaseCoordinator.swift */; };
 		1B461ADA25B4ADA3004DFF39 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B461AD925B4ADA3004DFF39 /* AppCoordinator.swift */; };
@@ -33,7 +33,7 @@
 		1B9B43D325B6154000C25901 /* ShowImageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9B43D225B6154000C25901 /* ShowImageCoordinator.swift */; };
 		1B9B43D625B615B500C25901 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9B43D525B615B500C25901 /* ImageViewModel.swift */; };
 		1B9B43D825B6163C00C25901 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9B43D725B6163C00C25901 /* ImageViewController.swift */; };
-		1B9B43DA25B6167D00C25901 /* ImageViewCintroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B9B43D925B6167D00C25901 /* ImageViewCintroller.xib */; };
+		1B9B43DA25B6167D00C25901 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B9B43D925B6167D00C25901 /* ImageViewController.xib */; };
 		1BC6611525B55B5400C2E0A1 /* CellWithImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6611425B55B5400C2E0A1 /* CellWithImageModel.swift */; };
 		1BC9E87825B6ADFF00C8559E /* ImageLoadingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9E87725B6ADFF00C8559E /* ImageLoadingUseCase.swift */; };
 		1BC9E87A25B6EACA00C8559E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9E87925B6EACA00C8559E /* Constants.swift */; };
@@ -50,7 +50,7 @@
 		1B461AC525B4AB34004DFF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B461ACE25B4ABAC004DFF39 /* ImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListCell.swift; sourceTree = "<group>"; };
 		1B461AD025B4ABF9004DFF39 /* ImageListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageListCell.xib; sourceTree = "<group>"; };
-		1B461AD225B4AC40004DFF39 /* ImageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageList.swift; sourceTree = "<group>"; };
+		1B461AD225B4AC40004DFF39 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
 		1B461AD425B4AD2D004DFF39 /* ImageListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListCoordinator.swift; sourceTree = "<group>"; };
 		1B461AD725B4AD61004DFF39 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		1B461AD925B4ADA3004DFF39 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		1B9B43D225B6154000C25901 /* ShowImageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageCoordinator.swift; sourceTree = "<group>"; };
 		1B9B43D525B615B500C25901 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		1B9B43D725B6163C00C25901 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		1B9B43D925B6167D00C25901 /* ImageViewCintroller.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewCintroller.xib; sourceTree = "<group>"; };
+		1B9B43D925B6167D00C25901 /* ImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
 		1BC6611425B55B5400C2E0A1 /* CellWithImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWithImageModel.swift; sourceTree = "<group>"; };
 		1BC9E87725B6ADFF00C8559E /* ImageLoadingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingUseCase.swift; sourceTree = "<group>"; };
 		1BC9E87925B6EACA00C8559E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				1B461ACD25B4AB97004DFF39 /* cell */,
-				1B461AD225B4AC40004DFF39 /* ImageList.swift */,
+				1B461AD225B4AC40004DFF39 /* ImageListViewController.swift */,
 				1B461ADD25B4AE77004DFF39 /* ImageListViewModel.swift */,
 			);
 			path = View;
@@ -269,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				1B9B43D725B6163C00C25901 /* ImageViewController.swift */,
-				1B9B43D925B6167D00C25901 /* ImageViewCintroller.xib */,
+				1B9B43D925B6167D00C25901 /* ImageViewController.xib */,
 				1B9B43D525B615B500C25901 /* ImageViewModel.swift */,
 			);
 			path = View;
@@ -345,7 +345,7 @@
 				1B461AC425B4AB34004DFF39 /* LaunchScreen.storyboard in Resources */,
 				1B461AC125B4AB34004DFF39 /* Preview Assets.xcassets in Resources */,
 				1B461ABE25B4AB34004DFF39 /* Assets.xcassets in Resources */,
-				1B9B43DA25B6167D00C25901 /* ImageViewCintroller.xib in Resources */,
+				1B9B43DA25B6167D00C25901 /* ImageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +380,7 @@
 				1B9B43D625B615B500C25901 /* ImageViewModel.swift in Sources */,
 				1B7BFB6D261D7E8D00AAD120 /* AppProtocols.swift in Sources */,
 				1BC9E87825B6ADFF00C8559E /* ImageLoadingUseCase.swift in Sources */,
-				1B461AD325B4AC40004DFF39 /* ImageList.swift in Sources */,
+				1B461AD325B4AC40004DFF39 /* ImageListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import UIKit
 
 class ImageViewModel: ViewModelProtocol{
     
-    var view: ImageViewCintroller
+    var view: ImageViewController
     var image: CellWithImageModel
     var service: Api
     var useCaase: ImageLoadingUseCase!
@@ -25,7 +25,7 @@ class ImageViewModel: ViewModelProtocol{
         self.useCaase = ImageLoadingUseCase()
         self.image = image;
         self.service = URLSessionApiSrevices()
-        self.view = ImageViewCintroller()
+        self.view = ImageViewController()
         self.view.viewModel = self
     }
     

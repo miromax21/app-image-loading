@@ -17,7 +17,7 @@ class ImageListCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         self.setDefault()
-        self.pic.isHidden = true;
+        self.pic.image = nil;
     }
     
     func confugure(usecase: ImageLoadingUseCase) {
